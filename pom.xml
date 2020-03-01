@@ -75,9 +75,17 @@
     </build>
     <profiles>
         <profile>
-            <id>native</id>
+            <id>jvm</id>
             <activation>
                 <activeByDefault>true</activeByDefault>
+                <property>
+                    <name>jvm</name>
+                </property>
+            </activation>
+        </profile>
+        <profile>
+            <id>native</id>
+            <activation>
                 <property>
                     <name>native</name>
                 </property>
