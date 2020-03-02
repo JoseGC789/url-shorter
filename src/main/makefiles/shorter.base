@@ -1,8 +1,8 @@
 build-jvm:
-	docker build -f url-shorter/src/main/docker/Dockerfile.jvm -t jvm/url-shorter .
+	docker build -f web/url-shorter/src/main/docker/Dockerfile.jvm -t jvm/url-shorter .
 
 build-native:
-	docker build -f url-shorter/src/main/docker/Dockerfile.native -t native/url-shorter .
+	docker build -f web/url-shorter/src/main/docker/Dockerfile.native -t native/url-shorter .
 
 native: build-native
 	docker-compose -f src/main/docker/docker-compose.native.yaml down
